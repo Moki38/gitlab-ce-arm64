@@ -10,10 +10,12 @@
 # gitlab-ce-arm64 (ARM64)
 
 ## Build docker image
-```docker build -t moki38/gitlab-ce:latest -t moki38/gitlab-ce:v15.7.2 github.com/Moki38/gitlab-ce-arm64
+```
+docker build -t moki38/gitlab-ce:latest -t moki38/gitlab-ce:v15.7.2 github.com/Moki38/gitlab-ce-arm64
 ````
 
 ## Push to docker.io
-```docker image push moki38/gitlab-ce:latest
+```
+docker image push moki38/gitlab-ce:latest
 docker image push moki38/gitlab-ce:v15.7.2
 ```
