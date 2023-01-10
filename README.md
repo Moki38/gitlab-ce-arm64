@@ -12,5 +12,6 @@ docker build -t moki38/gitlab-ce:latest -t moki38/gitlab-ce:v15.5.7 github.com/M
 
 # Push to docker.io
 docker image push moki38/gitlab-ce:latest
+
 docker image push moki38/gitlab-ce:v15.5.7
 
