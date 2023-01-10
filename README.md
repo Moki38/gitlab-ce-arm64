@@ -1,6 +1,10 @@
  
 # This is my private GitLab-CE container build (v15.7.2/linux/arm64), YMMV
 Couldn't find the release is was looking for, so i build it myself.
+**Build version
+```
+docker pull moki38/gitlab-ce
+```
  
 **Sources**: 
 - https://hub.docker.com/r/gitlab/gitlab-ce/dockerfile/
