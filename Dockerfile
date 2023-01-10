@@ -53,6 +53,9 @@ VOLUME ["/etc/gitlab", "/var/opt/gitlab", "/var/log/gitlab"]
 # Add release info
 COPY RELEASE /RELEASE
 
+# execute[init q] (package::runit_sysvinit line 28) had an error: Errno::ENOENT: No such file or directory - init
+RUN touch ./.dockerenv
+
 # Copy assets
 COPY assets/wrapper /usr/local/bin/
 
