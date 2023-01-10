@@ -1,5 +1,5 @@
  
-# This is my private gitlab-ce container build (v15.7.2), YMMV
+# This is my private GitLab-CE container build (v15.7.2/linux/arm64), YMMV
  
 **Sources**: 
 - https://hub.docker.com/r/gitlab/gitlab-ce/dockerfile/
