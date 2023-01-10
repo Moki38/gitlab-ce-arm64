@@ -1,23 +1,27 @@
-FROM debian:bullseye
-#ORIGINAL MAINTAINER Sytse Sijbrandij
-MAINTAINER Eric van Dijken
+FROM ubuntu:20.04
+MAINTAINER Sytse Sijbrandij
 
 # Install required packages
 RUN apt-get update -q \
     && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
       ca-certificates \
+      lsb-core \
+      apt-utils \
+      gnupg2 \
       openssh-server \
       wget \
-      curl \
-      sudo \
       apt-transport-https \
       vim \
       nano
 
+# Set locale
+RUN locale-gen --purge en_US.UTF-8
+
 # Download & Install GitLab
 # If you run GitLab Enterprise Edition point it to a location where you have downloaded it.
-RUN curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
-
+RUN echo "deb https://packages.gitlab.com/gitlab/gitlab-ce/ubuntu/ `lsb_release -cs` main" > /etc/apt/sources.list.d/gitlab_gitlab-ce.list
+#RUN wget -q -O - https://packages.gitlab.com/gpg.key | apt-key add -
+RUN wget -q -O - https://packages.gitlab.com/gpg.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/gitlab.gpg
 RUN apt-get update && apt-get install -yq --no-install-recommends gitlab-ce
 
 # Manage SSHD through runit
@@ -46,8 +50,11 @@ EXPOSE 443 80 22
 # Define data volumes
 VOLUME ["/etc/gitlab", "/var/opt/gitlab", "/var/log/gitlab"]
 
+# Add release info
+ADD RELEASE  /RELEASE
+
 # Copy assets
-#COPY assets/wrapper /usr/local/bin/
+COPY assets/wrapper /usr/local/bin/
 
 # Wrapper to handle signal, trigger runit and reconfigure GitLab
-#CMD ["/usr/local/bin/wrapper"]
+CMD ["/usr/local/bin/wrapper"]

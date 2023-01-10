@@ -50,6 +50,9 @@ EXPOSE 443 80 22
 # Define data volumes
 VOLUME ["/etc/gitlab", "/var/opt/gitlab", "/var/log/gitlab"]
 
+# Add release info
+ADD RELEASE  /RELEASE
+
 # Copy assets
 COPY assets/wrapper /usr/local/bin/
 

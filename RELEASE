@@ -1,0 +1,4 @@
+RELEASE_PACKAGE=gitlab-ce
+RELEASE_VERSION=15.6.2-ce
+DOWNLOAD_URL=https://packages.gitlab.com/gitlab/gitlab-ce/packages/ubuntu/focal/gitlab-ce_15.7.2-ce.0_arm64.deb
+
