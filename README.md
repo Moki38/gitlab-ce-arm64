@@ -2,13 +2,13 @@
 # This is my private gitlab-ce container build (v15.7.2), YMMV
  
 **Sources**: 
-         https://hub.docker.com/r/gitlab/gitlab-ce/dockerfile/
-         https://hub.docker.com/r/ravermeister/gitlab
-         https://packages.gitlab.com/app/gitlab/gitlab-ce/search?page=16&q=arm64
-         https://gitlab.com/gitlab-org/omnibus-gitlab/-/blob/master/doc/build/build_docker_image.md
+- https://hub.docker.com/r/gitlab/gitlab-ce/dockerfile/
+- https://hub.docker.com/r/ravermeister/gitlab
+- https://packages.gitlab.com/app/gitlab/gitlab-ce/search?page=16&q=arm64
+- https://gitlab.com/gitlab-org/omnibus-gitlab/-/blob/master/doc/build/build_docker_image.md
 
 **Usage**: 
-         https://docs.gitlab.com/ee/install/docker.html
+- https://docs.gitlab.com/ee/install/docker.html
 
 # gitlab-ce-arm64 (ARM64)
 
