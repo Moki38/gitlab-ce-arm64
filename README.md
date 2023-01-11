@@ -1,7 +1,8 @@
  
 # This is my private GitLab-CE container build (v15.7.2/linux/arm64), YMMV
-Couldn't find the release is was looking for, so i build it myself.
-**Build version
+Couldn't find the release i was looking for, so i build it myself.
+
+**Pull this build version.
 ```
 docker pull moki38/gitlab-ce
 ```
@@ -24,7 +25,7 @@ or
 podman build -t moki38/gitlab-ce:latest -t moki38/gitlab-ce:v15.7.2 github.com/Moki38/gitlab-ce-arm64
 ````
 
-## Push to docker.io
+## Push to docker.io (only if you are me).
 ```
 docker image push moki38/gitlab-ce:latest
 docker image push moki38/gitlab-ce:v15.7.2
