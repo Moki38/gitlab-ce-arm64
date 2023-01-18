@@ -20,16 +20,16 @@ docker pull moki38/gitlab-ce
 
 ## Build container image
 ```
-docker build -t moki38/gitlab-ce:latest -t moki38/gitlab-ce:v15.7.2 github.com/Moki38/gitlab-ce-arm64
+docker build -t moki38/gitlab-ce:latest -t moki38/gitlab-ce:v15.7.5 github.com/Moki38/gitlab-ce-arm64
 or
-podman build -t moki38/gitlab-ce:latest -t moki38/gitlab-ce:v15.7.2 github.com/Moki38/gitlab-ce-arm64
+podman build -t moki38/gitlab-ce:latest -t moki38/gitlab-ce:v15.7.5 github.com/Moki38/gitlab-ce-arm64
 ````
 
 ## Push to docker.io (only if you are me).
 ```
 docker image push moki38/gitlab-ce:latest
-docker image push moki38/gitlab-ce:v15.7.2
+docker image push moki38/gitlab-ce:v15.7.5
 or
 podman image push moki38/gitlab-ce:latest
-podman image push moki38/gitlab-ce:v15.7.2
+podman image push moki38/gitlab-ce:v15.7.5
 ```
