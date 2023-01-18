@@ -2,7 +2,7 @@
 # This is my private GitLab-CE container build (v15.7.2/linux/arm64), YMMV
 Couldn't find the release i was looking for, so i build it myself.
 
-**Pull this build version.
+**Pull this build version**:
 ```
 docker pull moki38/gitlab-ce
 ```
